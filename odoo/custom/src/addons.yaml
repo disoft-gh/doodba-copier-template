@@ -1,0 +1,223 @@
+# OCA Addons
+account-analytic:
+  - "*"
+
+account-closing:
+  - "*"
+
+account-budgeting:
+  - "*"
+
+account-financial-reporting:
+  - "*"
+
+account-financial-tools:
+  - "*"
+
+account-invoice-reporting:
+  - "*"
+
+account-invoicing:
+  - "*"
+
+account-payment:
+  - "*"
+
+account-reconcile:
+  - "*"
+
+bank-payment:
+  - "*"
+
+bank-statement-import:
+  - "*"
+
+brand:
+  - "*"
+
+commission:
+  - "*"
+
+connector:
+  - "*"
+
+contract:
+  - "*"
+
+crm:
+  - "*"
+
+currency:
+  - "*"
+
+delivery-carrier:
+  - "*"
+
+e-commerce:
+  - "*"
+
+field-service:
+  - "*"
+
+fleet:
+  - "*"
+
+geospatial:
+  - "*"
+
+helpdesk:
+  - "*"
+
+hr:
+  - "*"
+
+hr-expense:
+  - "*"
+
+knowledge:
+  - "*"
+
+# l10n-brazil:
+#   - "*"
+#
+maintenance:
+  - "*"
+
+management-system:
+  - "*"
+
+manufacture:
+  - "*"
+
+mis-builder:
+  - "*"
+
+mis-builder-contrib:
+  - "*"
+
+partner-contact:
+  - "*"
+
+product-attribute:
+  - "*"
+
+product-pack:
+  - "*"
+
+project:
+  - "*"
+
+purchase-workflow:
+  - "*"
+
+queue:
+  - "*"
+
+reporting-engine:
+  - "*"
+
+rest-framework:
+  - "*"
+
+sale-reporting:
+  - "*"
+
+sale-workflow:
+  - "*"
+
+server-auth:
+  - "*"
+
+server-backend:
+  - "*"
+
+server-brand:
+  - "*"
+
+server-env:
+  - "*"
+
+server-tools:
+  - "*"
+
+server-ux:
+  - "*"
+
+social:
+  - "*"
+
+stock-logistics-warehouse:
+  - "*"
+
+stock-logistics-workflow:
+  - "*"
+
+vertical-rental:
+  - "*"
+
+timesheet:
+  - "*"
+
+web:
+  - "*"
+
+website:
+  - "*"
+
+---
+# Odoo Repositories
+ENV:
+  DEFAULT_REPO_PATTERN: https://github.com/odoo/{}.git
+design-themes:
+  - "*"
+
+---
+# Trust-Code Repositories
+ENV:
+  DEFAULT_REPO_PATTERN: https://github.com/Trust-Code/{}.git
+odoo-brasil:
+  - "*"
+
+trustcode-addons:
+  - "*"
+
+ENV:
+  DEFAULT_REPO_PATTERN: https://github.com/code-137/{}.git
+odoo-apps:
+  - "*"
+
+---
+# Elego Repository
+rental-vertical:
+  defaults:
+    depth: $DEPTH_MERGE
+  merges:
+  - origin v15
+  remotes:
+    origin: https://github.com/elego/rental-vertical
+  target: origin v15
+
+vertical-rental:
+  defaults:
+    depth: $DEPTH_MERGE
+  merges:
+  - origin $ODOO_VERSION
+  remotes:
+    origin: https://github.com/elego/vertical-rental
+  target: origin $ODOO_VERSION
+
+---
+# Cybro Addons
+ENV:
+  DEFAULT_REPO_PATTERN: https://github.com/CybroOdoo/{}.git
+CybroAddons:
+  - "*"
+
+# # # ats-odoo:
+# # #   defaults:
+# # #     depth: $DEPTH_MERGE
+# # #   merges:
+# # #   - origin $ODOO_VERSION
+# # #   remotes:
+# # #     origin: https://github.com/marcelsavegnago/ats-odoo
+# # #   target: origin $ODOO_VERSION
